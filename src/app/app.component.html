@@ -17,6 +17,7 @@
 <hr>
 <!--
   Directiva ngClass
+  sirve para agregar clases
 -->
 <h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
 <div class="container">
@@ -30,6 +31,36 @@
   <p class="text-info d-none" [ngClass]="{'d-block':activo=='primero'}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt magnam, saepe minima nulla aliquam hic fugit, voluptatem, cupiditate vel eligendi eius accusantium quaerat tempora sed earum natus ipsum architecto error!</p>
   
   <p class="text-danger d-none" [ngClass]="{'d-block':activo=='segundo'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit dicta quisquam dolorum eligendi quaerat totam iusto, at, tempore quis reiciendis. Deleniti iste impedit commodi! Modi, impedit vel? Dolorem, excepturi!</p>
+
+</div>
+
+<hr>
+<!--
+  Directiva ngFor
+  se usa para recorrer un arreglo
+  se inicia con *ngFor="let (nombre de varibale que recorrera) of (el arreglo que recorrera); index as i"
+-->
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngFor]</h1>
+<div class="container">
+  
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let animal of animales; index as i">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ animal.tipo }}</td>
+            <td>{{ animal.nombre }}</td>
+            <td>{{ animal.edad }}</td>
+          </tr>
+        </tbody>
+      </table>
 
 </div>
 <app-cabecera></app-cabecera>
