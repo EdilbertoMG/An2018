@@ -1,67 +1,7 @@
-<!-- directiva ngIf
-     y el evento click 
--->
-<h1 class="container bg-dark text-white text-center my-4 py-4">ngIf show ={{show}}</h1>
 <div class="container">
-  <!-- en este boton se dice si se usa el evento click se debe pasar la varible show a falso ya que
-  en el componente la iniciamos en true -->
-  <button class="btn btn-warning" (click)="show=!show">Acción</button>
-  <!-- se crea un ngIf y else y se crea una varibale showDos -->
-  <p class="text-danger" *ngIf="show; else showDos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt magnam, saepe minima nulla aliquam hic fugit, voluptatem, cupiditate vel eligendi eius accusantium quaerat tempora sed earum natus ipsum architecto error!</p>
-  <!-- entonces al momento de hacerle click se mostrara el ng-template -->
-  <ng-template #showDos>
-      <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit dicta quisquam dolorum eligendi quaerat totam iusto, at, tempore quis reiciendis. Deleniti iste impedit commodi! Modi, impedit vel? Dolorem, excepturi!</p>
-  </ng-template>
+    <app-cabecera></app-cabecera>
+    <router-outlet></router-outlet>
+    <app-cuerpo></app-cuerpo>
+
+    <app-footer></app-footer>
 </div>
-
-<hr>
-<!--
-  Directiva ngClass
-  sirve para agregar clases
--->
-<h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
-<div class="container">
-  
-  <button class="btn btn-dark mb-3" (click)="activo='primero'">Primero</button>
-  <button class="btn btn-danger mb-3"(click)="activo='segundo'">Segundo</button>
-  <!-- se utilizan llaves {} para indicar condicionales
-        cuando se use el evento click en los botones la variable click tomara el valor de primero
-        o segundo dependiendo del boton que se oprima y asi se mostrara el parrafo que correponda
-  -->
-  <p class="text-info d-none" [ngClass]="{'d-block':activo=='primero'}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt magnam, saepe minima nulla aliquam hic fugit, voluptatem, cupiditate vel eligendi eius accusantium quaerat tempora sed earum natus ipsum architecto error!</p>
-  
-  <p class="text-danger d-none" [ngClass]="{'d-block':activo=='segundo'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit dicta quisquam dolorum eligendi quaerat totam iusto, at, tempore quis reiciendis. Deleniti iste impedit commodi! Modi, impedit vel? Dolorem, excepturi!</p>
-
-</div>
-
-<hr>
-<!--
-  Directiva ngFor
-  se usa para recorrer un arreglo
-  se inicia con *ngFor="let (nombre de varibale que recorrera) of (el arreglo que recorrera); index as i"
--->
-<h1 class="container bg-dark text-white text-center my-4 py-4">[ngFor]</h1>
-<div class="container">
-  
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Edad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let animal of animales; index as i">
-            <th scope="row">{{ i+1 }}</th>
-            <td>{{ animal.tipo }}</td>
-            <td>{{ animal.nombre }}</td>
-            <td>{{ animal.edad }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-</div>
-<app-cabecera></app-cabecera>
-<app-footer></app-footer>
