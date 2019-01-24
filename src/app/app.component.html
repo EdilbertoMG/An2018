@@ -6,8 +6,12 @@
   <!-- en este boton se dice si se usa el evento click se debe pasar la varible show a falso ya que
   en el componente la iniciamos en true -->
   <button class="btn btn-warning" (click)="show=!show">Acción</button>
-  <p class="text-danger" *ngIf="show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt magnam, saepe minima nulla aliquam hic fugit, voluptatem, cupiditate vel eligendi eius accusantium quaerat tempora sed earum natus ipsum architecto error!</p>
-  <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit dicta quisquam dolorum eligendi quaerat totam iusto, at, tempore quis reiciendis. Deleniti iste impedit commodi! Modi, impedit vel? Dolorem, excepturi!</p>
+  <!-- se crea un ngIf y else y se crea una varibale showDos -->
+  <p class="text-danger" *ngIf="show; else showDos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt magnam, saepe minima nulla aliquam hic fugit, voluptatem, cupiditate vel eligendi eius accusantium quaerat tempora sed earum natus ipsum architecto error!</p>
+  <!-- entonces al momento de hacerle click se mostrara el ng-template -->
+  <ng-template #showDos>
+      <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit dicta quisquam dolorum eligendi quaerat totam iusto, at, tempore quis reiciendis. Deleniti iste impedit commodi! Modi, impedit vel? Dolorem, excepturi!</p>
+  </ng-template>
 </div>
 
 <app-cabecera></app-cabecera>
