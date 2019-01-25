@@ -1,4 +1,14 @@
 <div class="mt-5">
-  <h2>Nosotros</h2>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptates necessitatibus amet ducimus, nihil alias officiis fugiat laboriosam doloremque dolores aut ex deleniti, a cumque voluptate. Omnis accusantium soluta maxime!</p>
+    <h2>Nosotros</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptates necessitatibus amet ducimus, nihil alias officiis fugiat laboriosam doloremque dolores aut ex deleniti, a cumque voluptate. Omnis accusantium soluta maxime!</p>
+    <div>
+        <!-- consumimos nuestro servio con un *ngFor le decimos que lo traiga en la variable persona del arreglo equipo -->
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let persona of equipo">
+                <h6>Nombre: {{ persona.nombre }}</h6>
+                <h6>Especialidad: {{ persona.especialidad }}</h6>
+                <a href="">Leer más..</a>
+            </li>
+        </ul>
+    </div>
 </div>
