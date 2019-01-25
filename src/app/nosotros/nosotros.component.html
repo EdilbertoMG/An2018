@@ -4,10 +4,10 @@
     <div>
         <!-- consumimos nuestro servio con un *ngFor le decimos que lo traiga en la variable persona del arreglo equipo -->
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let persona of equipo">
+            <li class="list-group-item" *ngFor="let persona of equipo, index as i">
                 <h6>Nombre: {{ persona.nombre }}</h6>
                 <h6>Especialidad: {{ persona.especialidad }}</h6>
-                <a href="">Leer más..</a>
+                <a routerLink="/equipo/{{ i }}">Leer más..</a>
             </li>
         </ul>
     </div>

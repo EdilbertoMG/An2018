@@ -1,6 +1,6 @@
 # Curso de Angular
 
-Este proyecto fue generado con[Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
 ## Curso de Angular / Crear e Iniciar proyectos en Angular
 ## Paso 1: Instalar el  Angular CLI

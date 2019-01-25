@@ -20,6 +20,8 @@ import { EquipoComponent } from './equipo/equipo.component';
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'nosotros', component: NosotrosComponent },
+  // creamos una variable para nuestra ruta dinamica equipo/:id
+  { path: 'equipo/:id', component: EquipoComponent },
   { path: '', component: CuerpoComponent, pathMatch: 'full' },
   // cuando la ruta no exista redirige a inicio en todos los casos
   { path: '**', redirectTo: '/', pathMatch: 'full' },

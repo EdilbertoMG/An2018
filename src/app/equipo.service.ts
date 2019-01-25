@@ -32,4 +32,11 @@ export class EquipoService {
   obtenerEquipo(){
     return this.equipo;
   }
+
+  // creamos una nueva funcion y le pasamos el parametro i
+
+  obtenerUno(i){
+    //retornamos del arreglo equipo un objeto i
+    return this.equipo[i];
+  }
 }
